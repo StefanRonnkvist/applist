@@ -20,11 +20,29 @@ class _MyHomePageDetailState extends State<MyHomePageDetail> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              widget.listData,
+        child: Row(
+          children: [
+            SizedBox(
+              width: 400,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    widget.listData,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 400,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    widget.listData,
+                  ),
+                ],
+              ),
             ),
           ],
         ),

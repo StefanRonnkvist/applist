@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import '/pages/MyHomePageDetail.dart';
+import '../pages/MyHomePageDetail.dart';
 
-class ASimpleList extends StatefulWidget {
-  const ASimpleList({super.key});
+class TheList extends StatefulWidget {
+  const TheList({super.key});
 
   @override
-  _ASimpleListState createState() => _ASimpleListState();
+  _TheListState createState() => _TheListState();
 }
 
-class _ASimpleListState extends State<ASimpleList> {
+class _TheListState extends State<TheList> {
   final TextStyle _biggerFont = const TextStyle(fontSize: 18.0);
 
   @override
@@ -16,9 +16,9 @@ class _ASimpleListState extends State<ASimpleList> {
     return Expanded(
       child: ListView.builder(
           padding: const EdgeInsets.all(10.0),
-          itemCount: items.length,
+          itemCount: theItems.length,
           itemBuilder: (BuildContext context, int index) {
-            final item = items[index];
+            final item = theItems[index];
             return _buildRow(item);
           }),
     );
@@ -29,9 +29,9 @@ class _ASimpleListState extends State<ASimpleList> {
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
             builder: (BuildContext context) => MyHomePageDetail(
-                  title: "Detail Page",
+                  title: "Landing Page",
                   listData: pair,
-                  key: const Key("Detail"),
+                  key: const Key("List"),
                 )));
       },
       title: Text(
@@ -41,6 +41,5 @@ class _ASimpleListState extends State<ASimpleList> {
     );
   }
 
-  final items =
-      List<String>.generate(20, (int index) => 'List Item $index');
+  final theItems = ["Accounts", "Production", "Sales", "Service","Careers"];
 }

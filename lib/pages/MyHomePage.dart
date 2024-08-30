@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/component/ASimpleList.dart';
+import '../component/TheList.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({required Key key, required this.title}) : super(key: key);
@@ -18,10 +18,26 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ASimpleList(),
+        child: Row(
+          children: [
+            SizedBox(
+              width: 200,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TheList(),
+                ],
+              ),
+            ),
+            SizedBox(
+              width: 600,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TheList(),
+                ],
+              ),
+            ),
           ],
         ),
       ),
